@@ -24,7 +24,7 @@ fn qsort_it(a: &mut Vec<i32>, left: usize, right: usize) {
             swap_it(a, last, x);
         }
     }
-    println!("Last is {:?} ", last);
+
     if last < 1 {
         return
     }
