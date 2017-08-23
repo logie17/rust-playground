@@ -39,3 +39,14 @@ fn swap_it(a: &mut Vec<i32>, i: usize, j: usize) {
     a[i] = a[j];
     a[j] = tmp;
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn it_works() {
+        let mut numbers = vec![1, 5, 3, 4, 10, 20, 15];
+        qsort_it(&mut numbers, 0, 6);
+        assert_eq!(numbers, vec![1, 3, 4, 5, 10, 15, 20]);
+    }
+}
